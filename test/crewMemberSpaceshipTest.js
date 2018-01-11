@@ -25,7 +25,7 @@ describe("ship with a crew", () => {
       expect(aluminumFalcon.phasersCharge).to.match(/uncharged/i);
 
       katie.chargePhasers();
-      expect(aluminumFalcon.phasersCharge).to.match(/charged/i);
+      expect(aluminumFalcon.phasersCharge).to.match(/charged!/i);
     });
   });
 
@@ -35,7 +35,7 @@ describe("ship with a crew", () => {
       expect(aluminumFalcon.warpDrive).to.match(/disengaged/i);
 
       tristan.engageWarpDrive();
-      expect(aluminumFalcon.warpDrive).to.match(/engaged/i);
+      expect(aluminumFalcon.warpDrive).to.match(/engaged!/i);
     });
   });
 
