@@ -6,7 +6,12 @@ class CrewMember{
   }
 
   engageWarpDrive () {
-    return this.position === 'Pilot' && this.currentShip !== 'Looking for a Rig' ? (this.currentShip.warpDrive = 'engaged') : 'had no effect';
+    
+    if (this.currentShip === 'Looking for a Rig') {
+      return 'had no effect'
+    } else if (this.position === 'Pilot') {
+      this.currentShip.warpDrive = 'engaged';
+    }
   }
 
   setsInvisibility () {
